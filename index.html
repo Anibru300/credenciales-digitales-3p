@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lic. Cynthia Hernández Gallegos | Gerente General - 3P SA DE CV</title>
+    <meta name="description" content="Tarjeta digital de Lic. Cynthia Hernández Gallegos, Gerente General de 3P SA DE CV. Contacto, catálogos y distribuidores.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lic. Cynthia Hernández Gallegos | Gerente General - 3P SA DE CV">
+    <meta property="og:description" content="Servicio, soporte, acompañamiento en todo momento y en todo lugar.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/b90ced1b5a50e970ed86015019cf93d426391bc3567d574f6d92932de8a7bec2.jpg">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: rgba(20, 20, 20, 0.85);
+            --accent: #facc15;
+            --accent-dark: #ca8a04;
+            --text: #ffffff;
+            --text-muted: #a1a1aa;
+            --border: rgba(255, 255, 255, 0.1);
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Fondo animado */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(250, 204, 21, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(8, 0, 225, 0.15) 0%, transparent 40%),
+                linear-gradient(135deg, #0a0a0a 0%, #151515 50%, #0a0a0a 100%);
+        }
+
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.5;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 24px 16px 60px;
+        }
+
+        /* Header / Logo */
+        .header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .logo-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 10px 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-wrapper img {
+            height: 36px;
+            width: auto;
+            opacity: 0.9;
+        }
+
+        .logo-wrapper span {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        /* Tarjeta principal */
+        .hero-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: 32px 24px;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-dark), var(--accent));
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            box-shadow: 0 0 30px rgba(250, 204, 21, 0.25);
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+
+        .position {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .slogan {
+            font-size: 14px;
+            font-style: italic;
+            color: var(--text-muted);
+            padding: 12px 16px;
+            background: var(--glass);
+            border-radius: 12px;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* Botones de acción rápida */
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+            color: var(--text);
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+        }
+
+        .action-btn i {
+            font-size: 18px;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent);
+        }
+
+        .action-btn.whatsapp {
+            background: rgba(37, 211, 102, 0.15);
+            border-color: rgba(37, 211, 102, 0.3);
+        }
+
+        .action-btn.whatsapp:hover {
+            background: rgba(37, 211, 102, 0.25);
+        }
+
+        .action-btn.call {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .action-btn.call:hover {
+            background: rgba(59, 130, 246, 0.25);
+        }
+
+        .action-btn.email {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .action-btn.email:hover {
+            background: rgba(239, 68, 68, 0.25);
+        }
+
+        .action-btn.save {
+            background: rgba(250, 204, 21, 0.15);
+            border-color: rgba(250, 204, 21, 0.3);
+            color: var(--accent);
+            cursor: pointer;
+        }
+
+        .action-btn.save:hover {
+            background: rgba(250, 204, 21, 0.25);
+        }
+
+        /* Secciones */
+        .section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(20px);
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent);
+        }
+
+        .section-title i {
+            font-size: 20px;
+        }
+
+        /* Distribuidores */
+        .distributor {
+            text-align: center;
+        }
+
+        .distributor img {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            opacity: 0.9;
+            transition: transform 0.3s ease;
+        }
+
+        .distributor img:hover {
+            transform: scale(1.03);
+        }
+
+        .distributor p {
+            margin-top: 12px;
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        /* Formulario */
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #71717a;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #0800e1 0%, #4f46e5 100%);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(8, 0, 225, 0.4);
+        }
+
+        /* Catálogos */
+        .catalog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .catalog-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 16px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+
+        .catalog-item:hover {
+            background: rgba(250, 204, 21, 0.08);
+            border-color: rgba(250, 204, 21, 0.3);
+            transform: translateX(5px);
+        }
+
+        .catalog-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            border-radius: 10px;
+            background: rgba(239, 68, 68, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ef4444;
+            font-size: 20px;
+        }
+
+        .catalog-info {
+            flex: 1;
+        }
+
+        .catalog-name {
+            font-weight: 600;
+            font-size: 15px;
+            display: block;
+        }
+
+        .catalog-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .catalog-arrow {
+            color: var(--text-muted);
+        }
+
+        /* Footer / Redes */
+        .footer {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            font-size: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            color: #000;
+            transform: translateY(-3px);
+            border-color: var(--accent);
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-card,
+        .section,
+        .quick-actions {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.1s; }
+        .section:nth-child(3) { animation-delay: 0.2s; }
+        .section:nth-child(4) { animation-delay: 0.3s; }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--accent);
+            color: #000;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 380px) {
+            .quick-actions {
+                grid-template-columns: 1fr;
+            }
+            
+            .name {
+                font-size: 22px;
+            }
+            
+            .profile-img {
+                width: 130px;
+                height: 130px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+
+    <div class="container">
+        <!-- Header / Logo -->
+        <header class="header">
+            <a href="https://www.facebook.com/3psadecv" target="_blank" class="logo-wrapper">
+                <img src="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/ce3e6a341a76356dc664c0d58004ac2d712708d2bef26c6e27ea4f3deb8ac1ff.png" alt="3P SA DE CV">
+                <span>3P SA DE CV</span>
+            </a>
+        </header>
+
+        <!-- Tarjeta principal -->
+        <section class="hero-card">
+            <img src="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/b90ced1b5a50e970ed86015019cf93d426391bc3567d574f6d92932de8a7bec2.jpg" alt="Lic. Cynthia Hernández Gallegos" class="profile-img">
+            <h1 class="name">Lic. Cynthia Hernández Gallegos</h1>
+            <p class="position">Gerente General</p>
+            <p class="slogan">"Servicio, soporte, acompañamiento en todo momento y en todo lugar"</p>
+        </section>
+
+        <!-- Botones de acción rápida -->
+        <div class="quick-actions">
+            <a href="https://wa.me/5210000000000" target="_blank" class="action-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="tel:+5210000000000" class="action-btn call">
+                <i class="fas fa-phone"></i>
+                <span>Llamar</span>
+            </a>
+            <a href="mailto:trespsadecv@hotmail.com" class="action-btn email">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <button class="action-btn save" onclick="downloadVCard()">
+                <i class="fas fa-user-plus"></i>
+                <span>Guardar contacto</span>
+            </button>
+        </div>
+
+        <!-- Distribuidores -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-handshake"></i>
+                Somos Distribuidores de
+            </h2>
+            <div class="distributor">
+                <a href="https://youtu.be/o4qKj7sBHuI" target="_blank">
+                    <img src="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/4d2ef5986e4f09d2db2b78477ebec0c0b93b890721252d41fff7d209cd86f3db.jpeg" alt="Distribuidor autorizado">
+                </a>
+                <p>Distribuidores autorizados de equipos y productos de calidad.</p>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-paper-plane"></i>
+                Tu contacto
+            </h2>
+            <form action="https://formsubmit.co/trespsadecv@hotmail.com" method="POST">
+                <!-- Configuración FormSubmit -->
+                <input type="hidden" name="_subject" value="Te preguntaré por:">
+                <input type="hidden" name="_next" value="https://descargoderesponsabilidad.conectasinlimites.net/disclaimer">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-group">
+                    <label for="firstname">Tu primer nombre</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="Ej. Juan" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phonenumber">WhatsApp</label>
+                    <input type="tel" id="phonenumber" name="phonenumber" placeholder="55 1234 5678" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Describe</label>
+                    <textarea id="message" name="message" rows="3" placeholder="¿En qué podemos ayudarte?"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">¡Respuesta inmediata!</button>
+            </form>
+        </section>
+
+        <!-- Catálogos -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-book-open"></i>
+                ¿Quieres conocer un poco más?
+            </h2>
+            <div class="catalog-list">
+                <a href="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/12d7f6b8a6fd2a91dc1761951d2a7ec3f7c6941dcdebea1184869ed5776c6222.pdf" target="_blank" class="catalog-item">
+                    <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="catalog-info">
+                        <span class="catalog-name">Catálogo de ALKE</span>
+                        <span class="catalog-meta">PDF · Descargar</span>
+                    </div>
+                    <i class="fas fa-chevron-right catalog-arrow"></i>
+                </a>
+                
+                <a href="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/1419c7ab8daa6362c18ada10bb98befe7d0f543ba923a5fba4548d80176ffb21.pdf" target="_blank" class="catalog-item">
+                    <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="catalog-info">
+                        <span class="catalog-name">Catálogo Lubing Pollos</span>
+                        <span class="catalog-meta">PDF · Descargar</span>
+                    </div>
+                    <i class="fas fa-chevron-right catalog-arrow"></i>
+                </a>
+                
+                <a href="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/a17b159da0baec38707a9fc82e241e7e3fc23978fe6d5738374e724f6ec4305c.pdf" target="_blank" class="catalog-item">
+                    <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="catalog-info">
+                        <span class="catalog-name">Catálogo Lubing Cerdos</span>
+                        <span class="catalog-meta">PDF · Descargar</span>
+                    </div>
+                    <i class="fas fa-chevron-right catalog-arrow"></i>
+                </a>
+                
+                <a href="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/bbc1facbb69a9492f3b7e9ce3da4aa833e4653a8dfc1da943c848df5934aee15.pdf" target="_blank" class="catalog-item">
+                    <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="catalog-info">
+                        <span class="catalog-name">Catálogo de Fancom</span>
+                        <span class="catalog-meta">PDF · Descargar</span>
+                    </div>
+                    <i class="fas fa-chevron-right catalog-arrow"></i>
+                </a>
+                
+                <a href="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/094b5efdfaa93d61a2afb2db69926709040c8e10008485a4683c8ecf91c9a84b.pdf" target="_blank" class="catalog-item">
+                    <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="catalog-info">
+                        <span class="catalog-name">Catálogo de SBM</span>
+                        <span class="catalog-meta">PDF · Descargar</span>
+                    </div>
+                    <i class="fas fa-chevron-right catalog-arrow"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://www.facebook.com/3psadecv" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/5210000000000" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:trespsadecv@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">© 2026 3P SA DE CV. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <div class="toast" id="toast">Contacto descargado correctamente</div>
+
+    <script>
+        function downloadVCard() {
+            const vCardData = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                'FN:Lic. Cynthia Hernández Gallegos',
+                'N:Hernández Gallegos;Cynthia;;Lic.;',
+                'TITLE:Gerente General',
+                'ORG:3P SA DE CV',
+                'TEL;TYPE=CELL:+5210000000000',
+                'EMAIL;TYPE=WORK:trespsadecv@hotmail.com',
+                'URL:https://www.facebook.com/3psadecv',
+                'NOTE:"Servicio, soporte, acompañamiento en todo momento y en todo lugar"',
+                'END:VCARD'
+            ].join('\n');
+
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'Cynthia_Hernandez_Gallegos.vcf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+
+            showToast('Contacto guardado correctamente');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Animación al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
