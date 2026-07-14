@@ -49,18 +49,37 @@
             line-height: 1.6;
         }
 
-        /* Fondo animado */
-        .bg-gradient {
+        /* Fondo de video */
+        .video-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -2;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(250, 204, 21, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(8, 0, 225, 0.15) 0%, transparent 40%),
-                linear-gradient(135deg, #0a0a0a 0%, #151515 50%, #0a0a0a 100%);
+            overflow: hidden;
+        }
+
+        .video-bg video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.85) 50%, rgba(10, 10, 10, 0.92) 100%);
         }
 
         .bg-grid {
@@ -74,7 +93,8 @@
                 linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
             background-size: 50px 50px;
-            opacity: 0.5;
+            opacity: 0.3;
+            pointer-events: none;
         }
 
         .container {
@@ -415,6 +435,40 @@
             color: var(--text-muted);
         }
 
+        /* Sección destacada */
+        .highlight-section {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(250, 204, 21, 0.15) 0%, rgba(8, 0, 225, 0.1) 100%);
+            border-color: rgba(250, 204, 21, 0.3);
+        }
+
+        .highlight-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1.5;
+        }
+
+        /* Video */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         /* Footer / Redes */
         .footer {
             text-align: center;
@@ -518,7 +572,12 @@
     </style>
 </head>
 <body>
-    <div class="bg-gradient"></div>
+    <div class="video-bg">
+        <video autoplay muted loop playsinline>
+            <source src="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/c9d3bfdf53dfde210bf1fa56a45f81050e16ec912884d48db7eb737ac6613f20.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-overlay"></div>
     <div class="bg-grid"></div>
 
     <div class="container">
@@ -615,50 +674,123 @@
                 ¿Quieres conocer un poco más?
             </h2>
             <div class="catalog-list">
-                <a href="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/12d7f6b8a6fd2a91dc1761951d2a7ec3f7c6941dcdebea1184869ed5776c6222.pdf" target="_blank" class="catalog-item">
+                <a href="#" class="catalog-item">
                     <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
                     <div class="catalog-info">
                         <span class="catalog-name">Catálogo de ALKE</span>
-                        <span class="catalog-meta">PDF · Descargar</span>
+                        <span class="catalog-meta">PDF</span>
                     </div>
                     <i class="fas fa-chevron-right catalog-arrow"></i>
                 </a>
                 
-                <a href="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/1419c7ab8daa6362c18ada10bb98befe7d0f543ba923a5fba4548d80176ffb21.pdf" target="_blank" class="catalog-item">
+                <a href="#" class="catalog-item">
                     <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
                     <div class="catalog-info">
                         <span class="catalog-name">Catálogo Lubing Pollos</span>
-                        <span class="catalog-meta">PDF · Descargar</span>
+                        <span class="catalog-meta">PDF</span>
                     </div>
                     <i class="fas fa-chevron-right catalog-arrow"></i>
                 </a>
                 
-                <a href="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/a17b159da0baec38707a9fc82e241e7e3fc23978fe6d5738374e724f6ec4305c.pdf" target="_blank" class="catalog-item">
+                <a href="#" class="catalog-item">
                     <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
                     <div class="catalog-info">
                         <span class="catalog-name">Catálogo Lubing Cerdos</span>
-                        <span class="catalog-meta">PDF · Descargar</span>
+                        <span class="catalog-meta">PDF</span>
                     </div>
                     <i class="fas fa-chevron-right catalog-arrow"></i>
                 </a>
                 
-                <a href="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/bbc1facbb69a9492f3b7e9ce3da4aa833e4653a8dfc1da943c848df5934aee15.pdf" target="_blank" class="catalog-item">
+                <a href="#" class="catalog-item">
+                    <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="catalog-info">
+                        <span class="catalog-name">Catálogo Lubing Acceso Rápido Refacc.</span>
+                        <span class="catalog-meta">PDF</span>
+                    </div>
+                    <i class="fas fa-chevron-right catalog-arrow"></i>
+                </a>
+                
+                <a href="#" class="catalog-item">
                     <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
                     <div class="catalog-info">
                         <span class="catalog-name">Catálogo de Fancom</span>
-                        <span class="catalog-meta">PDF · Descargar</span>
+                        <span class="catalog-meta">PDF</span>
                     </div>
                     <i class="fas fa-chevron-right catalog-arrow"></i>
                 </a>
                 
-                <a href="https://global-files-nginx.builderall.com/0466189d-d424-4d8c-8f25-f9e32f1bab26/094b5efdfaa93d61a2afb2db69926709040c8e10008485a4683c8ecf91c9a84b.pdf" target="_blank" class="catalog-item">
+                <a href="#" class="catalog-item">
                     <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
                     <div class="catalog-info">
                         <span class="catalog-name">Catálogo de SBM</span>
-                        <span class="catalog-meta">PDF · Descargar</span>
+                        <span class="catalog-meta">PDF</span>
                     </div>
                     <i class="fas fa-chevron-right catalog-arrow"></i>
                 </a>
+                
+                <a href="#" class="catalog-item">
+                    <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="catalog-info">
+                        <span class="catalog-name">Catálogo de L.B.WHITE</span>
+                        <span class="catalog-meta">PDF</span>
+                    </div>
+                    <i class="fas fa-chevron-right catalog-arrow"></i>
+                </a>
+                
+                <a href="#" class="catalog-item">
+                    <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="catalog-info">
+                        <span class="catalog-name">Catálogo de accesorios para aplicación MS SCHIPPERS</span>
+                        <span class="catalog-meta">PDF</span>
+                    </div>
+                    <i class="fas fa-chevron-right catalog-arrow"></i>
+                </a>
+                
+                <a href="#" class="catalog-item">
+                    <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="catalog-info">
+                        <span class="catalog-name">Catálogo de MS SCHIPPERS</span>
+                        <span class="catalog-meta">PDF</span>
+                    </div>
+                    <i class="fas fa-chevron-right catalog-arrow"></i>
+                </a>
+                
+                <a href="#" class="catalog-item">
+                    <div class="catalog-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="catalog-info">
+                        <span class="catalog-name">Catálogo de Tigsa</span>
+                        <span class="catalog-meta">PDF</span>
+                    </div>
+                    <i class="fas fa-chevron-right catalog-arrow"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Automatización -->
+        <section class="section highlight-section">
+            <h2 class="section-title">
+                <i class="fas fa-robot"></i>
+                Soluciones integrales
+            </h2>
+            <p class="highlight-text">
+                Automatización de granjas avícolas, porcinas y producción de champiñón.
+            </p>
+        </section>
+
+        <!-- Videos -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-play-circle"></i>
+                Videos
+            </h2>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/1sfGOrN33Q4" 
+                    title="Video 3P SA DE CV" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </section>
 
